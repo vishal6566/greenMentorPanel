@@ -29,7 +29,7 @@ const TableDisplay = () => {
   return (
     <Box
       bgColor={'#FFF'}
-      w={"54%"}
+      w={{base:"100%",xl:"54%"}}
       h={"full"}
       borderRadius={"8px"}
       mt={"15px"}
@@ -66,7 +66,7 @@ const TableDisplay = () => {
             
             </Flex>
         </Flex>
-      <Table variant="simple">
+      <Table variant="simple" w={{base:"100%",xl:"54%"}}>
         <Thead color={"#fafafa"}  borderTop="1px solid #ebebeb">
           <Tr>
             <Th
@@ -102,6 +102,7 @@ const TableDisplay = () => {
               lineHeight="normal"
               textTransform="uppercase"
               borderRight="1px solid #ebebeb"
+              display={{base:"none",md:"block"}}
             >
               REVENUE/EMISSION RATIO
             </Th>
@@ -153,6 +154,7 @@ const TableDisplay = () => {
              lineHeight="normal"
              borderRight="1px solid #ebebeb"
              textAlign={"center"}
+             display={{base:"none",md:"block"}}
            >
             {sup.re}
            </Td>

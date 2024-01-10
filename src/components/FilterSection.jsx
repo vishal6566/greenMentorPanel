@@ -80,10 +80,10 @@ const FilterSection = () => {
           </Text>
           <CombinedChart filteredData={filteredData} />
         </Box>
-        <Flex gap={8}>
+        <Box display={{base:'block',xl:"flex"}} gap={8}>
           <PieChart />
           <TableDisplay />
-        </Flex>
+        </Box>
       </Box>
     </Box>
   );

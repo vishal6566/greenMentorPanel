@@ -7,7 +7,7 @@ import FilterSection from "./FilterSection";
 
 const ContentBox = () => {
   return (
-    <Box w={"83%"} bgColor={'#f5f5f5'}>
+    <Box w={{base:"100%",xl:"83%"}} bgColor={'#f5f5f5'}>
       <TopBar />
       <FilterSection />
       

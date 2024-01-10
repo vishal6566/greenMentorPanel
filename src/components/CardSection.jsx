@@ -20,7 +20,7 @@ const CardSection = () => {
 
   return (
     <Grid
-      templateColumns="repeat(4, 1fr)"
+      templateColumns={{base:"repeat(1, 1fr)",sm:"repeat(2, 1fr)",xl:"repeat(4, 1fr)"}}
       gap={2}
       w={"90%"}
       pl={"20px"}
@@ -68,7 +68,7 @@ const CardSection = () => {
           }
         />
       </GridItem>
-      <GridItem w={"70%"}>
+      <GridItem w={{base:"100%",xl:'70%'}}>
         <Flex
           flexDir={"column"}
           bgColor={"#4bbd92"}

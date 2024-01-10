@@ -71,7 +71,7 @@ const PieChart = () => {
 
   return (
     <Box
-      w={"38%"}
+      w={{base:"80%",xl:"35%"}}
       m={"16px 0px 16px 20px"}
       borderRadius={"8px"}
       boxShadow={
@@ -106,7 +106,7 @@ const PieChart = () => {
           <Image src={dot} alt="pie" p={"8px 4px"} />
         </Flex>
       </Flex>
-      <Box mt={"30px"}>
+      <Box mt={"30px"} h={'100%'}>
         <Doughnut data={data} />
       </Box>
     </Box>

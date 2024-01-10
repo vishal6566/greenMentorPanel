@@ -1,21 +1,47 @@
-import React from "react";
-import { Box, Image, Text, Flex, Select,Button,Menu,
+import {
+    Drawer,
+    DrawerBody,
+    Box,
+    DrawerOverlay,
+    DrawerContent,
+    DrawerCloseButton,
+    useDisclosure,
+    Button,
+   Image, Text, Flex, Menu,
   MenuButton,
   MenuList,
-  MenuItem, } from "@chakra-ui/react";
-import { TriangleDownIcon,ChevronDownIcon } from "@chakra-ui/icons";
+  MenuItem,
+  } from '@chakra-ui/react'
+  import { TriangleDownIcon,ChevronDownIcon } from "@chakra-ui/icons";
 import Peters from "../assets/peters.svg";
 import setting from "../assets/setting.svg";
 import drop from "../assets/drop.svg";
 import beta from "../assets/beta.svg";
+import React from 'react'
 
-const Sidebar = () => {
-  return (
-    <Box bg={"black"} w={"17%"} h={'fill'}
-    display={{base:"none",xl:"block"}}
-    
-    >
-      {/* //image */}
+  export default function MenuBtn() {
+    const { isOpen, onOpen, onClose } = useDisclosure()
+    const btnRef = React.useRef()
+  
+    return (
+      <>
+        <Button display={{base:"block",xl:"none"}} ref={btnRef} colorScheme='teal' w={'100%'} onClick={onOpen}>
+          Menu
+        </Button>
+        <Drawer
+          isOpen={isOpen}
+          placement='left'
+          onClose={onClose}
+          finalFocusRef={btnRef}
+        >
+          <DrawerOverlay />
+          <DrawerContent>
+            <DrawerCloseButton color={'white'} />
+            
+  
+            <DrawerBody bg={'black'}>
+              <Box>
+                 {/* //image */}
       <Box borderBottom={"2px solid #212121"}>
         <Box p={"13px 10px 13px 5px"} w={"90%"} m={"0px 15px 15px 15px"}>
           <Image src={Peters} alt="peters" w={"128px"} h={"47px"} />
@@ -143,10 +169,12 @@ p={'20px 33px 20px 33px'}
  lineHeight=" 18px"
 >Open Help Center</Button>
       </Flex>
-
-   
-    </Box>
-  );
-};
-
-export default Sidebar;
+              </Box>
+            </DrawerBody>
+  
+            
+          </DrawerContent>
+        </Drawer>
+      </>
+    )
+  }

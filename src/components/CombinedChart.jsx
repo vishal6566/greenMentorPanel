@@ -145,8 +145,8 @@ const CombinedChart = ({filteredData}) => {
   };
 
   return (
-    <Box w={"92%"} ml={"20px"} borderRadius={"8px"}>
-      <Chart type="bar" data={data} options={options} />;
+    <Box w={{base:"100%",lg:"83%"}}  ml={"20px"} borderRadius={"8px"}>
+      <Chart type="bar" data={data}  options={options} />;
     </Box>
   );
 };
