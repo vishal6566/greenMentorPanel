@@ -146,7 +146,7 @@ export const data=[
         id:14,
         date:"5/7/23",
         month:"Jul",
-        year:2022,
+        year:2023,
         supplier:"Reliance",
         emissions:3487,
         revenue:575747,

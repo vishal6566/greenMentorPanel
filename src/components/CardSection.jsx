@@ -12,12 +12,12 @@ const CardSection = () => {
     const dataFor2023 = store.filter((item) => item.year === 2023);
 
     const totalEmissions2023 = dataFor2023.reduce((sum, current) => sum + current.emissions, 0);
-    const totalRe = dataFor2023.reduce((sum, current) => sum + current.re, 0);
+    const totalRe = dataFor2023.reduce((sum, current) => sum + current.re, 0).toFixed(2);
     
     setEmissionData(totalEmissions2023);
     setRe(totalRe)
   }, [store]);
-  console.log(emissionData)
+
   return (
     <Grid
       templateColumns="repeat(4, 1fr)"

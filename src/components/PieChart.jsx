@@ -12,16 +12,16 @@ const PieChart = () => {
   const store = useSelector((store) => store.data);
 
   useEffect(() => {
-    // Extract supplier names and emissions from the store
+  
     const supplierData = store.map((data) => ({
       name: data.supplier,
       emissions: data.emissions,
     }));
 
-    // Remove duplicates from supplier names
+
     const uniqueSupplierNames = Array.from(new Set(store.map((data) => data.supplier)));
 
-    // Sum up emissions for each unique supplier
+
     const aggregatedData = uniqueSupplierNames.map((supplierName) => 
     supplierData
       .filter((data) => data.name === supplierName)

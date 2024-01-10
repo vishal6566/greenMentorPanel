@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   Chart as ChartJS,
   LinearScale,
@@ -25,7 +25,35 @@ ChartJS.register(
   BarController
 );
 
-const CombinedChart = () => {
+const CombinedChart = ({filteredData}) => {
+ const [emission22,setEmission22]=useState([])
+ const [emission23,setEmission23]=useState([])
+ const [re22,setRe22]=useState([])
+ const [re23,setRe23]=useState([])
+ useEffect(() => {
+ 
+  const emissionsData2022 = filteredData
+    .filter((item) => item.year === 2022)
+    .map((item) => item.emissions);
+
+  const emissionsData2023 = filteredData
+    .filter((item) => item.year === 2023)
+    .map((item) => item.emissions);
+    const reData2022 = filteredData
+    .filter((item) => item.year === 2022)
+    .map((item) => item.re);
+
+  const reData2023 = filteredData
+    .filter((item) => item.year === 2023)
+    .map((item) => item.re);
+
+  setEmission22(emissionsData2022);
+  setEmission23(emissionsData2023);
+  setRe22(reData2022)
+  setRe23(reData2023)
+}, [filteredData]);
+
+
   const labels = [
     "Jan",
     "Feb",
@@ -48,7 +76,7 @@ const CombinedChart = () => {
         type: "bar",
         label: "Emission-2023",
         backgroundColor: "#546fc6",
-        data: [200, 100, 100, 300, 600, 700, 500, 100, 300, 600, 700, 500],
+        data: emission23,
         borderColor: "white",
         borderWidth: 2,
         yAxisID: "bar-y-axis",
@@ -57,25 +85,25 @@ const CombinedChart = () => {
         type: "bar",
         label: "Emission-2022",
         backgroundColor: "#91cb73",
-        data: [200, 100, 100, 300, 600, 700, 500, 100, 300, 600, 700, 500],
+        data:emission22,
         yAxisID: "bar-y-axis",
       },
       {
         type: "line",
         label: "R/E-2023",
-        borderColor: "#f2cc79",
+        borderColor: "#f9c561",
         borderWidth: 1,
         fill: false,
-        data: [160, 15, 10, 30, 25, 7, 50, 10, 30, 25, 7, 50],
+        data: re23,
         yAxisID: "line-y-axis",
       },
       {
         type: "line",
         label: "R/E-2022",
-        borderColor: "#e87174",
+        borderColor: "#e07374",
         borderWidth: 1,
         fill: false,
-        data: [16, 150, 100, 45, 50, 70, 70, 100, 45, 50, 70, 70],
+        data: re22,
         yAxisID: "line-y-axis",
       },
     ],

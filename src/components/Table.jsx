@@ -25,7 +25,7 @@ const TableDisplay = () => {
    
     setYear(dataFor2023);
   }, [store]);
-  console.log(year)
+ 
   return (
     <Box
       bgColor={'#FFF'}
