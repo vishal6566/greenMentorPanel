@@ -2,7 +2,7 @@
 
 
 
-## Project (Green mentor) : Clone of https://curious-nasturtium-2e0324.netlify.app/
+## Project (Green mentor) :  https://curious-nasturtium-2e0324.netlify.app/
 
 
 
@@ -38,8 +38,9 @@ In this project we have used the following tech stack.
 
 # Steps to run the project locally
 
--git clone 'url'
--npm i
--npm run start
+- git clone 'url'
+- npm i
+- npm run start
+
 
 
