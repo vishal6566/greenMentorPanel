@@ -29,7 +29,7 @@ const TableDisplay = () => {
   return (
     <Box
       bgColor={'#FFF'}
-      w={{base:"100%",xl:"54%"}}
+      w={{base:"100%",xl:"50%"}}
       h={"full"}
       borderRadius={"8px"}
       mt={"15px"}
@@ -66,7 +66,7 @@ const TableDisplay = () => {
             
             </Flex>
         </Flex>
-      <Table variant="simple" w={{base:"100%",xl:"54%"}}>
+      <Table variant="simple" >
         <Thead color={"#fafafa"}  borderTop="1px solid #ebebeb">
           <Tr>
             <Th
