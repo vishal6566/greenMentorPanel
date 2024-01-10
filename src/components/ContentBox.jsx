@@ -5,6 +5,8 @@ import CardSection from "./CardSection";
 import CombinedChart from "./CombinedChart";
 import PieChart from "./PieChart";
 import FilterSection from "./FilterSection";
+import Table from "./Table";
+import TableDisplay from "./Table";
 
 const ContentBox = () => {
   return (
@@ -44,8 +46,9 @@ const ContentBox = () => {
           </Text>
           <CombinedChart />
         </Box>
-        <Flex>
+        <Flex  gap={8}>
          <PieChart />
+         <TableDisplay />
         </Flex>
       </Box>
     </Box>

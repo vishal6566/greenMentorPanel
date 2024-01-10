@@ -1,7 +1,7 @@
 import React from 'react'
 import {Box,Text,Flex,Image} from "@chakra-ui/react"
 import iline from "../assets/iline.svg"
-const Card = ({title,text,border,gradient}) => {
+const Card = ({title,text,border,gradient,emissionData,co,yoy,yo}) => {
   return (
     <Flex
     flexDir={'column'}
@@ -43,8 +43,8 @@ const Card = ({title,text,border,gradient}) => {
         borderRadius={'8px'}
         borderLeft={`6px solid ${border}`}
         mr={'20px'}
-        py={'15px'}
-        pr={'15px'}
+        p={'15px'}
+       
         
         >
        <Text
@@ -54,15 +54,16 @@ const Card = ({title,text,border,gradient}) => {
        fontSize= '14px'
        fontStyle= 'normal'
        fontWeight= '500'
-       lineHeight= 'normal'> 126900 CO<sub>2</sub></Text>
+       lineHeight= 'normal'> {emissionData}{' '}{co}</Text>
        <Text
-       color= 'black'
+       color= '#c95a57'
 
        fontFamily= 'Inter'
        fontSize= '14px'
        fontStyle= 'normal'
        fontWeight= '500'
-       lineHeight= 'normal'>7.6%</Text>
+       
+       lineHeight= 'normal'>{yoy}{yo}</Text>
         </Flex>
     </Flex>
   )
