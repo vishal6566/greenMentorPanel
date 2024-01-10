@@ -1,14 +1,17 @@
 import React from "react";
-import { Box, Image, Text, Flex, Select,Button } from "@chakra-ui/react";
-import { TriangleDownIcon } from "@chakra-ui/icons";
+import { Box, Image, Text, Flex, Select,Button,Menu,
+  MenuButton,
+  MenuList,
+  MenuItem, } from "@chakra-ui/react";
+import { TriangleDownIcon,ChevronDownIcon } from "@chakra-ui/icons";
 import Peters from "../assets/peters.svg";
 import setting from "../assets/setting.svg";
 import drop from "../assets/drop.svg";
 import beta from "../assets/beta.svg";
-import poweredBy from "../assets/poweredBy.svg";
+
 const Sidebar = () => {
   return (
-    <Box bg={"black"} w={"17%"} h={'1176px'} >
+    <Box bg={"black"} w={"17%"} h={'fill'} >
       {/* //image */}
       <Box borderBottom={"2px solid #212121"}>
         <Box p={"13px 10px 13px 5px"} w={"90%"} m={"0px 15px 15px 15px"}>
@@ -37,54 +40,41 @@ const Sidebar = () => {
         </Text>
         <Flex alignItems={"center"} mt={'15px'} >
           <Image src={setting} alt="peters" w={"17px"} h={"17px"} m={"0px 5px 0px 12px"} />
-          <Select
-            placeholder="Energy"
-            icon={<TriangleDownIcon  />}
-            outline={"none"}
-            border={"none"}
-            w={"50%"}
-            color="#FFF"
-            fontFamily="Inter"
-            fontSize="15px"
-            fontStyle="normal"
-            fontWeight="500"
-            lineHeight=" 18px"
-          >
-            <option style={{ color: "black" }} value="option1">
-              Category 1
-            </option>
-            <option style={{ color: "black" }} value="option2">
-              Category 2
-            </option>
-            <option style={{ color: "black" }} value="option3">
-              Category 3
-            </option>
-          </Select>
+          <Menu>
+      <MenuButton as={Button} bg={'none'} color={'white'} rightIcon={<TriangleDownIcon />}>
+      Energy
+      </MenuButton>
+      <MenuList bgColor="#0f382f" color="white" outline={'none'}>
+        <MenuItem _hover={{ bgColor: "white", color: "black" }} bgColor="#0f382f">
+         Category 1
+        </MenuItem>
+        <MenuItem _hover={{ bgColor: "white", color: "black" }} bgColor="#0f382f">
+          Category 2
+        </MenuItem>
+        <MenuItem _hover={{ bgColor: "white", color: "black" }} bgColor="#0f382f">
+          Category 3
+        </MenuItem>
+      </MenuList>
+    </Menu>
         </Flex>
         <Flex alignItems={"center"} mt={'10px'}>
           <Image src={drop} alt="peters" w={"24px"} h={"24px"} ml={"10px"} />
-          <Select
-            placeholder="Water and Effluents"
-            icon={<TriangleDownIcon />}
-            outline={"none"}
-            border={"none"}
-            color="#FFF"
-            fontFamily="Inter"
-            fontSize="15px"
-            fontStyle="normal"
-            fontWeight="500"
-            lineHeight=" 18px"
-          >
-            <option style={{ color: "black" }} value="option1">
-              Category 1
-            </option>
-            <option style={{ color: "black" }} value="option2">
-              Category 2
-            </option>
-            <option style={{ color: "black" }} value="option3">
-              Category 3
-            </option>
-          </Select>
+          <Menu>
+      <MenuButton as={Button} bg={'none'} color={'white'} rightIcon={<TriangleDownIcon />}>
+      Water and Effluents
+      </MenuButton>
+      <MenuList bgColor="#0f382f" color="white">
+        <MenuItem _hover={{ bgColor: "white", color: "black" }} bgColor="#0f382f">
+         Category 1
+        </MenuItem>
+        <MenuItem _hover={{ bgColor: "white", color: "black" }} bgColor="#0f382f">
+          Category 2
+        </MenuItem>
+        <MenuItem _hover={{ bgColor: "white", color: "black" }} bgColor="#0f382f">
+          Category 3
+        </MenuItem>
+      </MenuList>
+    </Menu>
         </Flex>
       </Flex>
       <Flex

@@ -3,7 +3,7 @@ import { Grid, GridItem,Flex,Text } from '@chakra-ui/react'
 import Card from './Card'
 const CardSection = () => {
   return (
-    <Grid templateColumns='repeat(4, 1fr)' gap={2} w={'90%'}  pl={'20px'}>
+    <Grid templateColumns='repeat(4, 1fr)' gap={2} w={'90%'}  pl={'20px'}  css={{ transform: 'translateY(-50px)' }}>
        <GridItem> <Card title={'Current Year Emissions'} text={true} border={'#E03021'}
        gradient={'(0deg, rgba(224, 48, 33, 0.04) 0%, rgba(224, 48, 33, 0.04) 100%), #FFF'}
        /></GridItem>

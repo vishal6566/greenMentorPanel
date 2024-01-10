@@ -4,13 +4,18 @@ import TopBar from "./TopBar";
 import CardSection from "./CardSection";
 import CombinedChart from "./CombinedChart";
 import PieChart from "./PieChart";
+import FilterSection from "./FilterSection";
+
 const ContentBox = () => {
   return (
-    <Box w={"83%"}>
+    <Box w={"83%"} bgColor={'#f5f5f5'}>
       <TopBar />
+      <FilterSection />
       <Box
         borderRadius={"8px"}
         bgColor={"#fefefe"}
+       
+        mr={'10px'}
         boxShadow={
           "0px 0.599px 5.32px 0px rgba(0, 0, 0, 0.01), 0px 2.01px 17.869px 0px rgba(0, 0, 0, 0.01), 0px 9px 80px 0px rgba(0, 0, 0, 0.02)"
         }
@@ -40,31 +45,7 @@ const ContentBox = () => {
           <CombinedChart />
         </Box>
         <Flex>
-          <Box
-            border={"1px solid red"}
-            w={"38%"}
-            height={"300px"}
-            ml={"20px"}
-            borderRadius={"8px"}
-            boxShadow={
-              "0px 0.599px 5.32px 0px rgba(0, 0, 0, 0.01), 0px 2.01px 17.869px 0px rgba(0, 0, 0, 0.01), 0px 9px 80px 0px rgba(0, 0, 0, 0.02)"
-            }
-            bgColor={"#FFF"}
-          >
-            <Flex>
-              <Text
-                color="black"
-                m={"0px 0px 20px 20px"}
-                fontFamily="Inter"
-                fontSize="14px"
-                fontStyle="normal"
-                fontWeight="500"
-                lineHeight="normal"
-              >
-                Emission by Supplier
-              </Text>
-            </Flex>
-          </Box>
+         <PieChart />
         </Flex>
       </Box>
     </Box>

@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+
 import './App.css';
 import Sidebar from "./components/Sidebar"
 import ContentBox from './components/ContentBox';
