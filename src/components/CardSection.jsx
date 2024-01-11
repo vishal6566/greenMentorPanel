@@ -80,7 +80,7 @@ const CardSection = () => {
         >
           <Text
             color="#FFF"
-            fontFamily="Inter"
+            fontFamily='Helvetica Neue'
             fontSize="14px"
             fontStyle="normal"
             fontWeight="400"
@@ -92,7 +92,7 @@ const CardSection = () => {
           </Text>
           <Text
             color="#FFF"
-            fontFamily="Inter"
+            fontFamily='Helvetica Neue'
             fontSize="46px"
             fontStyle="normal"
             fontWeight="500"

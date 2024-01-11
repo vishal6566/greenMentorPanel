@@ -1,6 +1,7 @@
 import React from 'react'
 import {Box,Text,Flex,Image} from "@chakra-ui/react"
 import iline from "../assets/iline.svg"
+import "../App.css"
 const Card = ({title,text,border,gradient,emissionData,co,yoy,yo}) => {
   return (
     <Flex
@@ -18,7 +19,7 @@ const Card = ({title,text,border,gradient,emissionData,co,yoy,yo}) => {
         <Text
         color= 'black'
 
-        fontFamily= 'Inter'
+        className="my-custom-font"
         fontSize= '14px'
         fontStyle= 'normal'
         fontWeight= '500'
@@ -48,9 +49,10 @@ const Card = ({title,text,border,gradient,emissionData,co,yoy,yo}) => {
         
         >
        <Text
+          className="my-custom-font"
        color= 'black'
 
-       fontFamily= 'Inter'
+       
        fontSize= '14px'
        fontStyle= 'normal'
        fontWeight= '500'
@@ -58,7 +60,7 @@ const Card = ({title,text,border,gradient,emissionData,co,yoy,yo}) => {
        <Text
        color= '#c95a57'
 
-       fontFamily= 'Inter'
+       className="my-custom-font"
        fontSize= '14px'
        fontStyle= 'normal'
        fontWeight= '500'

@@ -71,7 +71,10 @@ const PieChart = () => {
 
   return (
     <Box
-      w={{base:"80%",xl:"35%"}}
+      w={{base:"70%",xl:"38%"}}
+    
+      height={'full'}
+    
       m={"16px 0px 16px 20px"}
       borderRadius={"8px"}
       boxShadow={
@@ -83,7 +86,7 @@ const PieChart = () => {
         <Text
           color="black"
           m={"0px 0px 20px 20px"}
-          fontFamily="Inter"
+          fontFamily="Helvetica Neue"
           fontSize="14px"
           fontStyle="normal"
           fontWeight="500"
@@ -106,7 +109,7 @@ const PieChart = () => {
           <Image src={dot} alt="pie" p={"8px 4px"} />
         </Flex>
       </Flex>
-      <Box mt={"30px"} h={'100%'}>
+      <Box mt={"30px"} p={'20px'} >
         <Doughnut data={data} />
       </Box>
     </Box>

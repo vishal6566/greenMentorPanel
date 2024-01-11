@@ -1,9 +1,9 @@
 import React from "react";
-import { Box, Image, Text, Flex, Select,Button,Menu,
+import { Box, Image, Text, Flex,Button,Menu,
   MenuButton,
   MenuList,
   MenuItem, } from "@chakra-ui/react";
-import { TriangleDownIcon,ChevronDownIcon } from "@chakra-ui/icons";
+import { TriangleDownIcon} from "@chakra-ui/icons";
 import Peters from "../assets/peters.svg";
 import setting from "../assets/setting.svg";
 import drop from "../assets/drop.svg";

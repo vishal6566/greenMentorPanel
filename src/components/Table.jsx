@@ -29,17 +29,17 @@ const TableDisplay = () => {
   return (
     <Box
       bgColor={'#FFF'}
-      w={{base:"100%",xl:"50%"}}
+      w={{base:"100%",xl:"54%"}}
       h={"full"}
       borderRadius={"8px"}
       mt={"15px"}
       p={'20px 0px'}
     >
         <Flex justifyContent={'space-between'} mb={'10px'} px={'20px'}>
-            <Flex w={'30%'}>
+            <Flex w={'50%'}>
             <Text
             
-             fontFamily="Inter"
+             fontFamily="Helvetica Neue"
              fontSize="16px"
              fontStyle="normal"
              fontWeight="500"
@@ -57,7 +57,7 @@ const TableDisplay = () => {
             <Text
             borderLeft={'1px solid black'}
             pl={'5px'}
-             fontFamily="Inter"
+             fontFamily="Helvetica Neue"
              fontSize="11px"
              fontStyle="normal"
              fontWeight="400"
@@ -71,7 +71,7 @@ const TableDisplay = () => {
           <Tr>
             <Th
               color="#a4a4a4"
-              fontFamily="Inter"
+              fontFamily="Helvetica Neue"
               fontSize="10px"
               fontStyle="normal"
               fontWeight="400"
@@ -83,7 +83,7 @@ const TableDisplay = () => {
             </Th>
             <Th
               color="#a4a4a4"
-              fontFamily="Inter"
+              fontFamily="Helvetica Neue"
               fontSize="10px"
               fontStyle="normal"
               fontWeight="400"
@@ -95,7 +95,7 @@ const TableDisplay = () => {
             </Th>
             <Th
               color="#a4a4a4"
-              fontFamily="Inter"
+              fontFamily="Helvetica Neue"
               fontSize="10px"
               fontStyle="normal"
               fontWeight="400"
@@ -108,7 +108,7 @@ const TableDisplay = () => {
             </Th>
             <Th
               color="#a4a4a4"
-              fontFamily="Inter"
+              fontFamily="Helvetica Neue"
               fontSize="10px"
               fontStyle="normal"
               fontWeight="400"
@@ -126,7 +126,7 @@ const TableDisplay = () => {
            <Td
              borderRight="1px solid #ebebeb"
              textAlign={"center"}
-             fontFamily="Inter"
+             fontFamily="Helvetica Neue"
              fontSize="14px"
              fontStyle="normal"
              fontWeight="400"
@@ -135,7 +135,7 @@ const TableDisplay = () => {
              {sup.month}
            </Td>
            <Td
-             fontFamily="Inter"
+             fontFamily="Helvetica Neue"
              fontSize="14px"
              fontStyle="normal"
              fontWeight="400"
@@ -147,7 +147,7 @@ const TableDisplay = () => {
            </Td>
 
            <Td
-             fontFamily="Inter"
+             fontFamily="Helvetica Neue"
              fontSize="14px"
              fontStyle="normal"
              fontWeight="400"
@@ -159,7 +159,7 @@ const TableDisplay = () => {
             {sup.re}
            </Td>
            <Td
-             fontFamily="Inter"
+             fontFamily="Helvetica Neue"
              fontSize="14px"
              fontStyle="normal"
              fontWeight="400"

@@ -16,7 +16,7 @@ const TopBar = () => {
      <Text
      color= 'black'
 
-     fontFamily= 'Inter'
+     fontFamily= 'Helvetica Neue'
      fontSize= '16px'
      fontStyle= 'normal'
      fontWeight= '600'

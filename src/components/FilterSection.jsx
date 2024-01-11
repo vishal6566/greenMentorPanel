@@ -34,6 +34,7 @@ const FilterSection = () => {
         <Flex border={"1px solid green"} borderRadius={"8px"}>
           <Box p={"10px 0px 0px 10px"}>Show Timeline:</Box>
           <Select
+          fontStyle={'Helvetica Neue'}
             color={"green"}
             fontWeight={500}
             width="150px"
@@ -70,7 +71,7 @@ const FilterSection = () => {
           <Text
             color="black"
             m={"0px 0px 20px 20px"}
-            fontFamily="Inter"
+            fontFamily="Helvetica Neue"
             fontSize="14px"
             fontStyle="normal"
             fontWeight="500"
