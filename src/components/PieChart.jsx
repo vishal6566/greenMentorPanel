@@ -13,22 +13,19 @@ const PieChart = () => {
 
   useEffect(() => {
   
-    const supplierData = store.map((data) => ({
-      name: data.supplier,
-      emissions: data.emissions,
-    }));
+    
 
 
     const uniqueSupplierNames = Array.from(new Set(store.map((data) => data.supplier)));
 
 
     const aggregatedData = uniqueSupplierNames.map((supplierName) => 
-    supplierData
-      .filter((data) => data.name === supplierName)
+    store
+      .filter((data) => data.supplier === supplierName)
       .reduce((sum, current) => sum + current.emissions, 0)
   );
 
-   
+ 
     setName(uniqueSupplierNames);
     setEmissionData(aggregatedData);
   }, [store]);
